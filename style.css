@@ -1,4 +1,15 @@
+body {
+  display: flex;
+}
+
 .Jupiler-button {
-    max-height: 200px;
-    max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 200px;
+  max-width: 300px;
+}
+
+.Jupiler-button:hover {
+  cursor: pointer;
 }
