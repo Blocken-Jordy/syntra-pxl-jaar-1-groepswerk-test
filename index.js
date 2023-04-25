@@ -1,23 +1,25 @@
 let counter = 0;
 let hiddenCounter = 0;
 
-const KlikbareJupilerKnop = document.querySelector(".jupiler-button");
+const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector('.tripel-button');
+const restartButton = document.querySelector(".restart-button")
+
 tripel.disabled = true;
 
-KlikbareJupilerKnop.onclick = function () {
+klikbareJupilerKnop.onclick = function () {
     counter++;
     hiddenCounter++;
     console.log(counter);
 
     if (hiddenCounter === 10) {
-        KlikbareJupilerKnop.disabled = true;
+        klikbareJupilerKnop.disabled = true;
         tripel.disabled = false;
     }
     };
     tripel.onclick = function () {
         counter += 2;
-        KlikbareJupilerKnop.disabled = false;
+        klikbareJupilerKnop.disabled = false;
         tripel.disabled = true;
         console.log(counter);
         hiddenCounter =0;
@@ -25,4 +27,10 @@ KlikbareJupilerKnop.onclick = function () {
 
 
 
+
+
+restartButton.addEventListener('click', () => {
+    counter = 0;
+    console.log(counter);
+});
 
