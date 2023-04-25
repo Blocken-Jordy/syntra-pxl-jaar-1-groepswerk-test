@@ -1,10 +1,17 @@
 let counter = 0;
 
-const KlikbareJupilerKnop = document.querySelector(".jupiler-button");
+const klikbareJupilerKnop = document.querySelector(".jupiler-button");
+const restartButton = document.querySelector(".restart-button")
 
 
-KlikbareJupilerKnop.addEventListener('click', () => {
+klikbareJupilerKnop.addEventListener('click', () => {
     counter++;
+    console.log(counter);
+});
+
+
+restartButton.addEventListener('click', () => {
+    counter = 0;
     console.log(counter);
 });
 
