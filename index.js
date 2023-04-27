@@ -5,6 +5,7 @@ const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector(".tripel-button");
 const restartButton = document.querySelector(".restart-button");
 let num = document.getElementById("coun");
+const upgrade = document.getElementById("up");
 
 tripel.disabled = true;
 
@@ -17,6 +18,10 @@ klikbareJupilerKnop.onclick = function () {
   if (hiddenCounter === 10) {
     klikbareJupilerKnop.disabled = true;
     tripel.disabled = false;
+  }
+  if (counter === 20) {
+    upgrade.disabled = false;
+    alert("gooed");
   }
 };
 tripel.onclick = function () {
