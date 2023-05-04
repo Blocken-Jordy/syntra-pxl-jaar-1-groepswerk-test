@@ -6,7 +6,7 @@ let sixpackInterval;
 const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector(".tripel-button");
 const restartButton = document.querySelector(".restart-button");
-let num = document.getElementById("coun");
+const num = document.getElementById("coun");
 const sixpack = document.getElementById("sixpack");
 
 tripel.disabled = true;
