@@ -53,7 +53,7 @@ restartButton.addEventListener("click", () => {
   clearInterval(sixpackInterval);
   clearInterval(vodkaInterval);
   if (counter < 10) sixpack.disabled = true;
-  if (counter < 20) vodka.disabled = true;
+  if (counter < 20) voka.disabled = true;
 });
 
 //sixpack knop - iedere 10s telt hij +1
