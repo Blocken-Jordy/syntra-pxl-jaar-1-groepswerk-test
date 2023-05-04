@@ -2,7 +2,8 @@ let counter = 0;
 let hiddenCounter = 0;
 let sixpackCounter = 0;
 let sixpackInterval;
-let vodka;
+let vodkaInterval;
+let vodka = 0;
 
 const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector(".tripel-button");
@@ -27,6 +28,9 @@ klikbareJupilerKnop.onclick = function () {
   if (counter === 10) {
     sixpack.disabled = false;
   }
+  if (counter === 20) {
+    voka.disabled = false;
+  }
 };
 
 // Tripel knop +2
@@ -43,10 +47,13 @@ tripel.onclick = function () {
 restartButton.addEventListener("click", () => {
   counter = 0;
   num.value = counter;
+  vodka = 0;
   sixpackCounter = 0;
   hiddenCounter = 0;
   clearInterval(sixpackInterval);
+  clearInterval(vodkaInterval);
   if (counter < 10) sixpack.disabled = true;
+  if (counter < 20) vodka.disabled = true;
 });
 
 //sixpack knop - iedere 10s telt hij +1
@@ -74,14 +81,24 @@ function timer() {
   }, 1000);
 }
 
+voka.onclick = function () {
+  counter -= 10;
+  vodka += 2;
+  num.value = counter;
+  tweedeUpgrade();
+  if (counter < 20) voka.disabled = true;
+};
+
 function tweedeUpgrade() {
-  if (vodka) {
-    clearInterval(vodka);
+  if (vodkaInterval) {
+    clearInterval(vodkaInterval);
   }
-  vodka = setInterval(() => {
+  vodkaInterval = setInterval(() => {
     counter += vodka;
     num.value = counter;
     console.log(counter);
+
+
     if (counter < 20) {
       voka.disabled = true;
     } else {
