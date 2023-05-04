@@ -49,6 +49,8 @@ restartButton.addEventListener("click", () => {
   sixpackCounter = 0;
   hiddenCounter = 0;
     clearInterval(sixpackInterval);
+    if (counter < 10)
+    sixpack.disabled = true;
 });
 
 //sixpack knop - iedere 10s telt hij +1
@@ -57,6 +59,8 @@ sixpack.onclick = function () {
   sixpackCounter += 1;
   num.value = counter;
   timer();
+  if (counter < 10)
+  sixpack.disabled = true;
 };
 
 function timer() {
