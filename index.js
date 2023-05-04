@@ -16,7 +16,6 @@ klikbareJupilerKnop.onclick = function () {
   counter++;
   hiddenCounter++;
   num.value = counter;
-  console.log(counter);
 
   if (hiddenCounter === 10) {
     klikbareJupilerKnop.disabled = true;
@@ -33,7 +32,6 @@ tripel.onclick = function () {
   counter += 2;
   klikbareJupilerKnop.disabled = false;
   tripel.disabled = true;
-  console.log(counter);
   num.value = counter;
 
   hiddenCounter = 0;
