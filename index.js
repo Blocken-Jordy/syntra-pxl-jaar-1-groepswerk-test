@@ -7,7 +7,7 @@ let vodka;
 const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector(".tripel-button");
 const restartButton = document.querySelector(".restart-button");
-let num = document.getElementById("coun");
+const num = document.getElementById("coun");
 const sixpack = document.getElementById("sixpack");
 const voka = document.getElementById("vodka");
 
@@ -18,7 +18,6 @@ klikbareJupilerKnop.onclick = function () {
   counter++;
   hiddenCounter++;
   num.value = counter;
-  console.log(counter);
 
   if (hiddenCounter === 10) {
     klikbareJupilerKnop.disabled = true;
@@ -35,7 +34,6 @@ tripel.onclick = function () {
   counter += 2;
   klikbareJupilerKnop.disabled = false;
   tripel.disabled = true;
-  console.log(counter);
   num.value = counter;
 
   hiddenCounter = 0;
@@ -45,12 +43,10 @@ tripel.onclick = function () {
 restartButton.addEventListener("click", () => {
   counter = 0;
   num.value = counter;
-  console.log(counter);
   sixpackCounter = 0;
   hiddenCounter = 0;
-    clearInterval(sixpackInterval);
-    if (counter < 10)
-    sixpack.disabled = true;
+  clearInterval(sixpackInterval);
+  if (counter < 10) sixpack.disabled = true;
 });
 
 //sixpack knop - iedere 10s telt hij +1
@@ -59,8 +55,7 @@ sixpack.onclick = function () {
   sixpackCounter += 1;
   num.value = counter;
   timer();
-  if (counter < 10)
-  sixpack.disabled = true;
+  if (counter < 10) sixpack.disabled = true;
 };
 
 function timer() {
