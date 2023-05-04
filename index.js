@@ -44,9 +44,11 @@ tripel.onclick = function () {
 //restart knop
 restartButton.addEventListener("click", () => {
   counter = 0;
+  num.value = counter;
   console.log(counter);
   sixpackCounter = 0;
-  clearInterval(sixpackInterval);
+  hiddenCounter = 0;
+    clearInterval(sixpackInterval);
 });
 
 //sixpack knop - iedere 10s telt hij +1
