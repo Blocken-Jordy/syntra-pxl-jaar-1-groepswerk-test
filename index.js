@@ -2,12 +2,14 @@ let counter = 0;
 let hiddenCounter = 0;
 let sixpackCounter = 0;
 let sixpackInterval;
+let vodka;
 
 const klikbareJupilerKnop = document.querySelector(".jupiler-button");
 const tripel = document.querySelector(".tripel-button");
 const restartButton = document.querySelector(".restart-button");
 const num = document.getElementById("coun");
 const sixpack = document.getElementById("sixpack");
+const voka = document.getElementById("vodka");
 
 tripel.disabled = true;
 
@@ -40,8 +42,10 @@ tripel.onclick = function () {
 //restart knop
 restartButton.addEventListener("click", () => {
   counter = 0;
+  num.value = counter;
   console.log(counter);
   sixpackCounter = 0;
+  hiddenCounter = 0;
   clearInterval(sixpackInterval);
 });
 
@@ -65,6 +69,22 @@ function timer() {
       sixpack.disabled = true;
     } else {
       sixpack.disabled = false;
+    }
+  }, 1000);
+}
+
+function tweedeUpgrade() {
+  if (vodka) {
+    clearInterval(vodka);
+  }
+  vodka = setInterval(() => {
+    counter += vodka;
+    num.value = counter;
+    console.log(counter);
+    if (counter < 20) {
+      voka.disabled = true;
+    } else {
+      voka.disabled = false;
     }
   }, 1000);
 }
