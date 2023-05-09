@@ -22,47 +22,115 @@
   </head>
   <body>
     <!-- score punten -->
-    <div class="container scorePunten bg-success d-flex justify-content-center">
+    <div
+      class="container scorePunten mt-5 bg-success d-flex justify-content-center"
+    >
       <div class="row align-items-center">
-        <div class="col-6 text-center bg-body fw-bold">
+        <div
+          class="col-12 text-center bg-body fw-bold fs-5"
+          style="
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid;
+            background-color: gold;
+          "
+        >
           <label for="punten">Punten:</label>
         </div>
 
-        <div class="col-6">
-          <input type="number" id="coun" placeholder="counter" />
+        <div class="col d-flex justify-content-center m-5">
+          <input
+            type="text"
+            id="coun"
+            placeholder="counter"
+            style="
+              width: 180px;
+              height: 140px;
+              font-size: x-large;
+              text-align: center;
+              
+             
+             
+              border-radius: 10px;
+              background: rgba(198, 194, 194, 0.99);
+              box-shadow: 0 8px 32px 0 rgba(4, 5, 8, 0.70);
+              backdrop-filter: blur (8px);
+              border:1px solid rgba(0, 2, 0, 0.50)
+            "
+          />
         </div>
       </div>
     </div>
 
     <!-- score punten klaar -->
-    <div class="container">
-      <div class="restart-button">
-        <button class="restart button">restart</button>
+
+    <div class="container bg-body-secondary">
+      <div class="row d-flex justify-content-between">
+        <div class="col-6 p-0 m-0">
+          <button class="jupiler-button m-4">
+            <img
+              src="https://jupiler.be/sites/default/files/2022-08/jupiler_ribbed_can.png"
+              alt="blikje jupiler knop"
+              width="180px"
+              height="180px"
+              class="m-0 p-0"
+            />
+          </button>
+        </div>
+
+        <div class="col-6 m-0 p-0">
+          <button class="tripel-button m-4">
+            <img
+              src="https://www.bierwebshop.be/wp-content/uploads/2019/04/tripel-karmeliet-brouwerij-bosteels-bierwebshop.jpg"
+              alt="tripel"
+              width="180px"
+              height="180px"
+              class="m-0 p-0"
+            />
+          </button>
+        </div>
       </div>
-      <button class="jupiler-button">
-        <img
-          src="https://jupiler.be/sites/default/files/2022-08/jupiler_ribbed_can.png"
-          alt="blikje jupiler knop"
-          width="90px"
-        />
-      </button>
-      <button class="tripel-button">
-        <img
-          src="https://www.bierwebshop.be/wp-content/uploads/2019/04/tripel-karmeliet-brouwerij-bosteels-bierwebshop.jpg"
-          alt="tripel"
-          width="90px"
-        />
-      </button>
     </div>
 
-    <div class="container m-5">
-      <div class="row">
-        <div class="col-6">
-          <button id="sixpack" disabled="true">upgrade</button>
+    <div class="container p-5 bg-secondary-subtle">
+      <div class="row d-flex justify-content-center">
+        <div class="col-6 d-flex justify-content-center">
+          <button
+            id="sixpack"
+            disabled="true"
+            style="
+              width: 100px;
+              border-radius: 30px;
+              color: red;
+              background-color: yellow;
+
+            "
+            class=""
+          >
+            Upgrade 1
+          </button>
         </div>
-        <div class="col-6">
-          <button id="vodka" disabled="true">upgrade 2</button>
+        <div class="col-6 d-flex justify-content-center">
+          <button
+            id="vodka"
+            disabled="true"
+            style="
+              width: 100px;
+              border-radius: 30px;
+              color: red;
+              background-color: yellow;
+            "
+            class=""
+          >
+            Upgrade 2
+          </button>
         </div>
+      </div>
+    </div>
+
+    <div class="container bg-success">
+      <div class="row restart-button">
+        <button class="restart button" style="width: 100px; height: 74px; border-radius: 20px; ">Restart</button>
       </div>
     </div>
   </body>
