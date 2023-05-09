@@ -28,7 +28,7 @@ klikbareJupilerKnop.onclick = function () {
   if (counter === 10) {
     sixpack.disabled = false;
   }
-  if (counter === 20) {
+  if (counter === 10) {
     voka.disabled = false;
   }
 };
@@ -53,7 +53,9 @@ restartButton.addEventListener("click", () => {
   clearInterval(sixpackInterval);
   clearInterval(vodkaInterval);
   if (counter < 10) sixpack.disabled = true;
-  if (counter < 20) voka.disabled = true;
+  if (counter < 10) voka.disabled = true;
+  klikbareJupilerKnop.disabled = false;
+  tripel.disabled = true;
 });
 
 //sixpack knop - iedere 10s telt hij +1
@@ -62,7 +64,14 @@ sixpack.onclick = function () {
   sixpackCounter += 1;
   num.value = counter;
   timer();
-  if (counter < 10) sixpack.disabled = true;
+  if (counter < 10) {
+    sixpack.disabled = true;
+    voka.disabled = true;
+  } else {
+    sixpack.disabled = false;
+    voka.disabled = false;
+  }
+
 };
 
 function timer() {
@@ -75,8 +84,10 @@ function timer() {
     console.log(counter);
     if (counter < 10) {
       sixpack.disabled = true;
+      voka.disabled = true;
     } else {
       sixpack.disabled = false;
+      voka.disabled = false;
     }
   }, 1000);
 }
@@ -86,7 +97,13 @@ voka.onclick = function () {
   vodka += 2;
   num.value = counter;
   tweedeUpgrade();
-  if (counter < 20) voka.disabled = true;
+  if (counter < 10) {
+    sixpack.disabled = true;
+    voka.disabled = true;
+  } else {
+    sixpack.disabled = false;
+    voka.disabled = false;
+  }
 };
 
 function tweedeUpgrade() {
@@ -99,10 +116,12 @@ function tweedeUpgrade() {
     console.log(counter);
 
 
-    if (counter < 20) {
+    if (counter < 10) {
       voka.disabled = true;
+      sixpack.disabled = true;
     } else {
       voka.disabled = false;
+      sixpack.disabled = false;
     }
   }, 1000);
 }
